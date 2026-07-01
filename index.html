@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Self-Check Kiosk</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo-section">
+
+            <img src="logo.png" alt="Health Kiosk Logo" class="logo">
+
+            <div>
+                <h1>Health Self-Check Kiosk</h1>
+                <p>Personal Wellness Assessment System</p>
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- HERO SECTION -->
+
+    <!-- HERO SECTION -->
+
+<section class="hero">
+
+    <div class="hero-overlay">
+
+        <div class="hero-content">
+
+            <h2>Health Self-Check Kiosk</h2>
+
+            <p>
+                Complete a quick health assessment and receive instant BMI results
+                with personalized wellness recommendations.
+            </p>
+
+            <a href="#assessment" class="hero-btn">
+                Start Assessment
+            </a>
+
+            <div class="hero-stats">
+
+                <div class="stat-card">
+                    <h3>BMI</h3>
+                    <p>Health Indicator</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>24/7</h3>
+                    <p>Self Assessment</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>100%</h3>
+                    <p>Private Check</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Instant</h3>
+                    <p>Results</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+
+        <section id="assessment" class="kiosk-container">
+
+            <!-- FORM CARD -->
+
+            <div class="form-card">
+
+                <div class="card-header">
+
+                    <h2>Health Assessment Form</h2>
+
+                    <p>
+                        Complete the information below to calculate your Body Mass Index (BMI).
+                    </p>
+
+                </div>
+
+                <form id="bmiForm">
+
+                    <div class="input-group">
+
+                        <label for="name">Full Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+
+                            <label for="age">Age</label>
+
+                            <input
+                                type="number"
+                                id="age"
+                                name="age"
+                                min="1"
+                                max="120"
+                                placeholder="Age"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label for="sex">Sex</label>
+
+                            <select
+                                id="sex"
+                                name="sex"
+                                required
+                            >
+
+                                <option value="">Select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="input-group">
+
+                            <label for="weight">Weight (kg)</label>
+
+                            <input
+                                type="number"
+                                id="weight"
+                                name="weight"
+                                min="1"
+                                step="0.1"
+                                placeholder="e.g. 65"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label for="height">Height (cm)</label>
+
+                            <input
+                                type="number"
+                                id="height"
+                                name="height"
+                                min="1"
+                                step="0.1"
+                                placeholder="e.g. 170"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit" class="submit-btn">
+
+                        Check My BMI
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- RESULT CARD -->
+
+            <section id="resultCard" class="result-card hidden">
+
+                <div class="result-header">
+
+                    <h2>Your BMI Result</h2>
+
+                </div>
+
+                <div class="result-content">
+
+                    <div id="resultBadge" class="result-badge">
+
+                        BMI CATEGORY
+
+                    </div>
+
+                    <h3 id="resultName">Name</h3>
+
+                    <div class="bmi-value">
+
+                        <span id="bmiValue">0.0</span>
+
+                    </div>
+
+                    <p id="resultCategory">
+
+                        Category
+
+                    </p>
+
+                    <p id="recommendation">
+
+                        Recommendation message appears here.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- RECENT ASSESSMENTS -->
+
+        <section class="history-section">
+
+            <h2>Recent Assessments</h2>
+
+            <p>
+                Displays recently processed BMI records during this session.
+            </p>
+
+            <div id="historyContainer" class="history-container">
+
+                <p class="empty-history">
+                    No assessments yet.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Health Self-Check Kiosk | Wellness Monitoring System
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
